@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="parse">Parse</button>
+<script>
+
+    document.getElementById('parse').addEventListener('click', function () {
+        fetch('/parser/doc', {
+            method: 'post',
+            body: JSON.stringify({name: 'and'}),
+            headers: { 'Content-type': 'application/json' }
+        }).then(res=>{
+            debugger;
+        })
+    });
+
+</script>
+</body>
+</html>
